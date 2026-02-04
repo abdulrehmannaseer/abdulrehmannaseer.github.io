@@ -9,7 +9,7 @@
 title                    : "Abdul Rehman"
 description              : "Motivated Data Scientist with a strong foundation in machine learning, deep learning, and computer vision. Passionate about advancing research in anomaly detection and multimodal learning, with published and under-review work in leading venues. Dedicated to pursuing graduate studies to deepen theoretical understanding, contribute to impactful AI research, and develop innovative data-driven solutions to real-world problems."
 repository               : "abdulrehmannaseer/abdulrehmannaseer.github.io"
-google_scholar_stats_use_cdn : true
+google_scholar_stats_use_cdn: false
 
 # google analytics
 google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
