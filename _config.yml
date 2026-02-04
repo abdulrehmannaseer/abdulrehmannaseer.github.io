@@ -23,9 +23,9 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Abdul Rehman"
   avatar           : "images/android-chrome-512x512.png"
-  bio              : "Lorem ipsum College"
-  location         : "GIFT University, Gujranwala"
-  employer         : "Lab Instructor"
+  bio              : "Data Scientist | Researcher"
+  location         : "Lab Instructor GIFT University, Gujranwala"
+  employer         : 
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=ZTuS-yUAAAAJ"
   email            : "abdulrehman.naseer@gift.edu.pk"
