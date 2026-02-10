@@ -24,7 +24,7 @@ innovative data-driven solutions to real-world problems.
 
 My research interests include Machine Learning and Computer Vision, with a specific focus on Topological Deep Learning, Industrial Anomaly Detection, and Multimodal Sensor Fusion. My work has been accepted at international venues such as DICTA 2025 and the IEEE Sensors Journal , and I was recognized with 1st Position in my academic cohort during my studies.
 
-You can find my publications on <a href='https://scholar.google.com/citations?user=ZTuS-yUAAAAJ'>Google Scholar</a> <a href='https://scholar.google.com/citations?user=ZTuS-yUAAAAJ'><img src="https://img.shields.io/badge/Google%20Scholar-f6f6f6?logo=google-scholar&logoColor=4285F4&style=flat" style="vertical-align:middle;" alt="Google Scholar"></a>.
+You can find my publications on <a href='https://scholar.google.com/citations?user=ZTuS-yUAAAAJ'><img src="https://img.shields.io/badge/Google%20Scholar-f6f6f6?logo=google-scholar&logoColor=4285F4&style=flat" style="vertical-align:middle;" alt="Google Scholar"></a>.
 
 
 # 🔥 News
@@ -52,6 +52,7 @@ Usman Ali, Ali Zia, Waqas Ali, Umer Ramzan, **Abdul Rehman**, Muhammad Tayyab Ch
 [2D-3D Feature Fusion via Cross-Modal Latent Synthesis and Attention-Guided Restoration for Industrial Anomaly Detection](https://doi.org/10.1109/DICTA68720.2025.11302453)
 
 Usman Ali, Ali Zia, **Abdul Rehman**, Umer Ramzan, Zohaib Hassan, Talha Sattar, Jing Wang, Wei Xiang
+
 [**GITHUB**](https://github.com/adabrh/MAFR) 
 
 </div>
