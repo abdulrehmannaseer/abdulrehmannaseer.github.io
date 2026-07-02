@@ -88,11 +88,50 @@ body {
   }
 }
 
-/* Main Layout Wrapper */
+/* Main Layout Wrapper - CSS Grid Overrides to solve narrow sidebar and floats */
 #main {
-  max-width: 1100px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  max-width: 1200px !important;
+  margin: 2rem auto !important;
+  padding: 0 1.5rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2rem !important;
+  float: none !important;
+  clear: both !important;
+  width: auto !important;
+
+  @media (min-width: 925px) {
+    display: grid !important;
+    grid-template-columns: 295px 1fr !important;
+    gap: 2.5rem !important;
+    align-items: start !important;
+  }
+}
+
+.sidebar {
+  width: auto !important;
+  float: none !important;
+  margin-right: 0 !important;
+  position: sticky !important;
+  top: 100px;
+  
+  /* Prevent any vertical text overlaps in contact details */
+  .author__urls li {
+    white-space: normal !important;
+    word-break: break-word !important;
+    line-height: 1.4 !important;
+    align-items: flex-start !important;
+    i {
+      margin-top: 3px !important;
+    }
+  }
+}
+
+.page {
+  width: auto !important;
+  float: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 /* Sidebar & Profile Styling */
@@ -416,10 +455,10 @@ body {
       }
     }
 
-    /* Action Buttons (Github, DOI, etc.) */
-    a[href*="github"],
-    a[href*="doi.org"],
-    a[href*="ieee"] {
+    /* Action Buttons (Github, DOI, etc.) - Exclude the paper title link */
+    a[href*="github"]:not(:first-of-type),
+    a[href*="doi.org"]:not(:first-of-type),
+    a[href*="ieee"]:not(:first-of-type) {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
@@ -446,7 +485,7 @@ body {
       }
     }
 
-    a[href*="github"] {
+    a[href*="github"]:not(:first-of-type) {
       &::before {
         content: '\f09b';
         font-family: 'Font Awesome 5 Brands', 'FontAwesome';
@@ -461,8 +500,8 @@ body {
       }
     }
 
-    a[href*="doi.org"],
-    a[href*="ieee"] {
+    a[href*="doi.org"]:not(:first-of-type),
+    a[href*="ieee"]:not(:first-of-type) {
       &::before {
         content: '\f0c1';
         font-family: 'Font Awesome 5 Free', 'FontAwesome';
