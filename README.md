@@ -1,72 +1,80 @@
-
-<h1 align="center">
-AcadHomepage
-</h1>
-
-<div align="center">
-
-[![](https://img.shields.io/github/stars/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/forks/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/issues/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/license/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io/blob/main/LICENSE)  | [中文文档](./docs/README-zh.md) 
-</div>
-
-<p align="center">A Modern and Responsive Academic Personal Homepage</p>
+# 🎓 Abdul Rehman Naseer — Personal Portfolio & Research Site
 
 <p align="center">
-    <br>
-    <img src="docs/screenshot.png" width="100%"/>
-    <br>
+  <a href="https://abdulrehmannaseer.github.io/"><img src="https://img.shields.io/badge/Live%20Website-abdulrehmannaseer.github.io-4f46e5?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Live Portfolio"></a>
+  <a href="https://scholar.google.com/citations?user=ZTuS-yUAAAAJ"><img src="https://img.shields.io/badge/Google%20Scholar-Profile-blue?style=for-the-badge&logo=google-scholar&logoColor=white" alt="Google Scholar"></a>
+  <a href="https://orcid.org/0009-0001-0003-3932"><img src="https://img.shields.io/badge/ORCID-0009--0001--0003--3932-a6cf39?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID"></a>
 </p>
 
-Some examples:
-- [Demo Page](https://rayeren.github.io/acad-homepage.github.io/)
-- [Personal Homepage of the author](https://rayeren.github.io/)
+<p align="center">
+  <a href="https://www.linkedin.com/in/abdulrehmannaseer"><img src="https://img.shields.io/badge/LinkedIn-abdulrehmannaseer-0077b5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="https://github.com/adabrh"><img src="https://img.shields.io/badge/GitHub-adabrh-181717?style=flat&logo=github&logoColor=white" alt="GitHub"></a>
+  <a href="https://www.researchgate.net/profile/Abdul-Rehman-490"><img src="https://img.shields.io/badge/ResearchGate-Profile-00ccb1?style=flat&logo=researchgate&logoColor=white" alt="ResearchGate"></a>
+</p>
 
-## Key Features
-- **Automatically update google scholar citations**: using the google scholar crawler and github action, this REPO can update the author citations and publication citations automatically.
-- **Support Google analytics**: you can trace the traffics of your homepage by easy configuration.
-- **Responsive**: this homepage automatically adjust for different screen sizes and viewports.
-- **Beautiful and Simple Design**: this homepage is beautiful and simple, which is very suitable for academic personal homepage.
-- **SEO**: search Engine Optimization (SEO) helps search engines find the information you publish on your homepage easily, then rank it against similar websites.
+Welcome! This repository houses the source code for my professional academic portfolio, showcasing my research, publications, and accomplishments in **Data Science, Machine Learning, and Computer Vision**.
 
-## Quick Start
+---
 
-1. Fork this REPO and rename to `USERNAME.github.io`, where `USERNAME` is your github USERNAME.
-1. Configure the google scholar citation crawler:
-    1. Find your google scholar ID in the url of your google scholar page (e.g., https://scholar.google.com/citations?user=SCHOLAR_ID), where `SCHOLAR_ID` is your google scholar ID.
-    1. Set GOOGLE_SCHOLAR_ID variable to your google scholar ID in `Settings -> Secrets -> Actions -> New repository secret` of the REPO website with `name=GOOGLE_SCHOLAR_ID` and `value=SCHOLAR_ID`.
-    1. Click the `Action` of the REPO website and enable the workflows by clicking *"I understand my workflows, go ahead and enable them"*. This github action will generate google scholar citation stats data `gs_data.json` in `google-scholar-stats` branch of your REPO. When you update your main branch, this action will be triggered. This action will also be trigger 08:00 UTC everyday.
-1. Generate favicon using [favicon-generator](https://redketchup.io/favicon-generator) and download all generated files to `REPO/images`.
-1. Modify the configuration of your homepage `_config.yml`:
-    1. `title`: the title of your homepage
-    1. `description`: the description of your homepage
-    1. `repository`: USER_NAME/REPO_NAME  
-    1. `google_analytics_id` (optional): google analytics ID
-    1. SEO Related keys (optional): get these keys from search engine consoles (e.g. Google, Bing and Baidu) and paste here.
-    1. `author`: the author information of this homepage, including some other websites, emails, city and univeristy.
-    1. More configuration details are described in the comments.
-1. Add your homepage content in `_pages/about.md`.
-    1. You can use html+markdown syntax just same as jekyll.
-    1. You can use a `<span>` tag with class `show_paper_citations` and attribute `data` to display the citations of your paper. Set the data to the google scholar paper ID. For
-        ```html
-        <span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span>
-        ``` 
-        > Q: How to get the google scholar paper ID?   
-        > A: Enter your google scholar homepage and click the paper name. Then you can see the paper ID from `citation_for_view=XXXX`, where `XXXX` is the required paper ID.
-1. Your page will be published at `https://USERNAME.github.io`.
+## 🔍 Research Interests
 
-## Debug Locally
+My academic work focus lies at the intersection of deep learning and real-world industrial computer vision challenges. Key domains include:
+* **Industrial Anomaly Detection**: Unsupervised anomaly localization in 2D and 3D sensor streams.
+* **Multimodal Sensor Fusion**: Fusing point cloud data (3D) and camera frames (2D) for robust diagnosis.
+* **Topological Deep Learning & Graphs**: Exploring complex structural alignments via hypergraphs.
+* **Predictive Fault Diagnosis**: High-accuracy fault classification in induction motors.
 
-1. Clone your REPO to local using `git clone`.
-1. Install Jekyll building environment, including `Ruby`, `RubyGems`, `GCC` and `Make` following [the installation guide](https://jekyllrb.com/docs/installation/#requirements).
-1. Run `bash run_server.sh` to start Jekyll livereload server.
-1. Open http://127.0.0.1:4000 in your browser.
-1. If you change the source code of the website, the livereload server will automatically refresh.
-1. When you finish the modification of your homepage, `commit` your changings and `push` to your remote REPO using `git` command.
+---
 
-# Acknowledges
+## 📝 Featured Publications
 
-- AcadHomepage incorporates Font Awesome, which is distributed under the terms of the SIL OFL 1.1 and MIT License.
-- AcadHomepage is influenced by the github repo [mmistakes/minimal-mistakes](https://github.com/mmistakes/minimal-mistakes), which is distributed under the MIT License.
-- AcadHomepage is influenced by the github repo [academicpages/academicpages.github.io](https://github.com/academicpages/academicpages.github.io), which is distributed under the MIT License.
+### 1. Multimodal Fault Diagnosis (IEEE Sensors Journal, 2026)
+* **Title**: *Hypergraph Contrastive Sensor Fusion for Multimodal Fault Diagnosis in Induction Motors*
+* **Links**: [Paper Link](https://doi.org/10.1109/JSEN.2025.3648413) | [Official Code Repository](https://github.com/EngrUsmaanAli/MM-HCAN)
+
+### 2. 2D-3D Feature Fusion (DICTA 2025)
+* **Title**: *2D-3D Feature Fusion via Cross-Modal Latent Synthesis and Attention-Guided Restoration for Industrial Anomaly Detection*
+* **Links**: [Paper Link](https://doi.org/10.1109/DICTA68720.2025.11302453) | [Official Code Repository](https://github.com/adabrh/MAFR)
+
+---
+
+## 💻 Tech Stack & Architecture
+
+This portfolio has been customized with a **modern, premium, responsive light theme** with clean layout structures:
+* **Core Framework**: Jekyll (GitHub Pages compatible static site builder)
+* **Typography**: Outfit (headings) and Inter (body copy) loaded dynamically via Google Fonts
+* **Layouts**: 
+  * Sticky Glassmorphic Header navigation bar with backdrop-blur
+  * Responsive Sidebar Profile Card (vertical alignment on desktop, horizontal alignment on mobile)
+  * Dynamic Research Timeline for the News section
+  * Modern Card Layouts for publication details with floating conference tags and outline icon buttons
+* **Metadata & SEO**: Injected JSON-LD Person schema markup, canonical links, and custom title templates to index cleanly on Google.
+
+---
+
+## ⚡ Automation: Google Scholar Sync
+
+This repository contains a **Google Scholar citation crawler** powered by GitHub Actions:
+* **Daily citation sync**: A Python script in `.github/workflows` executes daily to update publication citation counts dynamically.
+* **Live Shields.io integration**: Fetches statistics automatically and updates shields on the homepage.
+
+---
+
+## 🛠️ Local Development
+
+If you wish to build or test the site locally:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/abdulrehmannaseer/abdulrehmannaseer.github.io.git
+   cd abdulrehmannaseer.github.io
+   ```
+2. **Install Jekyll dependencies**:
+   ```bash
+   bundle install
+   ```
+3. **Run the local livereload server**:
+   ```bash
+   bundle exec jekyll serve
+   ```
+4. Open `http://localhost:4000` in your web browser.
