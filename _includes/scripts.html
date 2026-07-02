@@ -14,20 +14,56 @@
       }
     });
 
-    // Subtle reveal-on-scroll, skipped when the user prefers reduced motion
+    // Light/dark theme toggle (initial theme is applied in head.html)
+    var toggle = document.getElementById('theme-toggle');
+    if (toggle) {
+      var root = document.documentElement;
+      var syncPressed = function () {
+        toggle.setAttribute('aria-pressed', root.getAttribute('data-theme') === 'dark' ? 'true' : 'false');
+      };
+      syncPressed();
+      toggle.addEventListener('click', function () {
+        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        syncPressed();
+      });
+    }
+
+    // Staggered reveal-on-scroll, skipped when the user prefers reduced motion
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (!reduceMotion && 'IntersectionObserver' in window) {
-      var targets = document.querySelectorAll('.paper-box, .skills-category');
+      var targets = document.querySelectorAll(
+        '.paper-box, .skills-category, #news + ul > li, #manuscripts + ul > li, #awards + ul > li, #education + ul > li'
+      );
       var observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
+            var el = entry.target;
+            var delay = parseInt(el.dataset.revealDelay || '0', 10);
+            el.classList.add('is-visible');
+            observer.unobserve(el);
+            // Drop the helper classes once revealed so hover transitions run undelayed
+            window.setTimeout(function () {
+              el.classList.remove('reveal', 'is-visible');
+              el.style.transitionDelay = '';
+            }, delay + 700);
           }
         });
       }, { threshold: 0.1, rootMargin: '0px 0px -5% 0px' });
+
+      var perParent = [];
       targets.forEach(function (el) {
+        var entry = perParent.find(function (p) { return p.parent === el.parentNode; });
+        if (!entry) {
+          entry = { parent: el.parentNode, count: 0 };
+          perParent.push(entry);
+        }
+        var delay = Math.min(entry.count * 80, 400);
+        entry.count += 1;
         el.classList.add('reveal');
+        el.dataset.revealDelay = String(delay);
+        el.style.transitionDelay = delay + 'ms';
         observer.observe(el);
       });
     }

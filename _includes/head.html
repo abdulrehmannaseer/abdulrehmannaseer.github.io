@@ -6,6 +6,14 @@
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  (function () {
+    var theme = null;
+    try { theme = localStorage.getItem('theme'); } catch (e) {}
+    if (theme !== 'light' && theme !== 'dark') {
+      theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
 </script>
 
-<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/main.css?v={{ site.github.build_revision | default: site.time | date: '%s' }}">
