@@ -6,8 +6,42 @@
 <meta name="msapplication-TileColor" content="#000000">
 <meta name="msapplication-TileImage" content="images/mstile-144x144.png?v=M44lzPylqQ">
 <meta name="msapplication-config" content="images/browserconfig.xml?v=M44lzPylqQ">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#4f46e5">
 <link rel="stylesheet" href="assets/css/academicons.css"/>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Structured Data (Schema.org) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Abdul Rehman Naseer",
+  "url": "{{ site.url | default: site.github.url }}",
+  "image": "{{ site.url | default: site.github.url }}/{{ site.author.avatar }}",
+  "sameAs": [
+    "https://github.com/{{ site.author.github }}",
+    "https://www.linkedin.com/in/{{ site.author.linkedin }}",
+    "{{ site.author.googlescholar }}",
+    "{{ site.author.orcid }}",
+    "{{ site.author.researchgate }}"
+  ],
+  "jobTitle": "Data Scientist & Machine Learning Researcher",
+  "worksFor": {
+    "@type": "EducationalOrganization",
+    "name": "GIFT University"
+  },
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "GIFT University",
+    "sameAs": "https://www.gift.edu.pk"
+  },
+  "description": "{{ site.description }}"
+}
+</script>
 
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
 <script type="text/x-mathjax-config">

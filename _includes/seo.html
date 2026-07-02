@@ -8,9 +8,18 @@
   {% assign canonical_url = page.url | replace: "index.html", "" | prepend: site.url %}
 {% endif %}
 
-<title>{{ site.title }}</title>
+{% if page.url == "/" %}
+  <title>Abdul Rehman Naseer</title>
+{% elsif page.title %}
+  <title>{{ page.title }} | {{ site.title }}</title>
+{% else %}
+  <title>{{ site.title }}</title>
+{% endif %}
 
 {% assign seo_description = page.description | default: page.excerpt | default: site.description %}
+{% if seo_description == "" or seo_description == nil %}
+  {% assign seo_description = site.description %}
+{% endif %}
 {% if seo_description %}
   {% assign seo_description = seo_description | markdownify | strip_html | strip_newlines | escape_once %}
 {% endif %}
@@ -29,18 +38,23 @@
   {% assign seo_author_twitter = seo_author_twitter | replace: "@", "" %}
 {% endif %}
 
+<meta name="description" content="{{ seo_description }}">
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="{{ site.title }}">
-<meta property="og:title" content="{{ site.title }}">
+{% if page.url == "/" %}
+  <meta property="og:title" content="Abdul Rehman Naseer">
+{% elsif page.title %}
+  <meta property="og:title" content="{{ page.title }} | {{ site.title }}">
+{% else %}
+  <meta property="og:title" content="{{ site.title }}">
+{% endif %}
 
 {% if seo_url %}
   <link rel="canonical" href="{{ page.url | prepend: seo_url | replace: "/index.html", "/" }}">
   <meta property="og:url" content="{{ page.url | prepend: seo_url | replace: "/index.html", "/" }}">
 {% endif %}
 
-{% if page.excerpt %}
-  <meta property="og:description" content="{{ seo_description }}">
-{% endif %}
+<meta property="og:description" content="{{ seo_description }}">
 
 {% if site.twitter.username %}
   <meta name="twitter:site" content="@{{ site.twitter.username | replace: "@", "" }}">
