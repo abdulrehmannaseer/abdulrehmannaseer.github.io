@@ -8,8 +8,8 @@
 # Site Settings
 title                    : "Abdul Rehman Naseer"
 description              : "Exploring unsupervised learning and feature alignment to solve complex 2D and 3D computer vision challenges."
+url                      : "https://abdulrehmannaseer.github.io"
 repository               : "abdulrehmannaseer/abdulrehmannaseer.github.io"
-google_scholar_stats_use_cdn : true
 
 # google analytics
 google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
@@ -136,7 +136,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-timezone: Asia/Shanghai # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Karachi # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
@@ -153,11 +153,3 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jemoji
-
-
-# HTML Compression
-# - http://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development

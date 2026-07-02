@@ -48,15 +48,15 @@ This portfolio has been customized with a **modern, premium, responsive light th
   * Responsive Sidebar Profile Card (vertical alignment on desktop, horizontal alignment on mobile)
   * Dynamic Research Timeline for the News section
   * Modern Card Layouts for publication details with floating conference tags and outline icon buttons
-* **Metadata & SEO**: Injected JSON-LD Person schema markup, canonical links, and custom title templates to index cleanly on Google.
+* **Metadata & SEO**: Injected JSON-LD Person schema markup, canonical links, Open Graph and Twitter card tags, `robots.txt`, sitemap, and custom title templates to index cleanly on Google.
+* **Accessibility**: Skip-to-content link, visible focus states, semantic landmarks, descriptive alt text, and full `prefers-reduced-motion` support.
 
 ---
 
 ## ⚡ Automation: Google Scholar Sync
 
 This repository contains a **Google Scholar citation crawler** powered by GitHub Actions:
-* **Daily citation sync**: A Python script in `.github/workflows` executes daily to update publication citation counts dynamically.
-* **Live Shields.io integration**: Fetches statistics automatically and updates shields on the homepage.
+* **Daily citation sync**: A Python script in `.github/workflows` executes daily to update publication citation data on the `google-scholar-stats` branch.
 
 ---
 

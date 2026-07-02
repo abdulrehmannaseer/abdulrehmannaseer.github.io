@@ -1,13 +1,11 @@
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/32i.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-<link rel="manifest" href="images/site.webmanifest">
-
-<meta name="msapplication-TileColor" content="#000000">
-<meta name="msapplication-TileImage" content="images/mstile-144x144.png?v=M44lzPylqQ">
-<meta name="msapplication-config" content="images/browserconfig.xml?v=M44lzPylqQ">
+<link rel="icon" href="/images/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<link rel="manifest" href="/images/site.webmanifest">
 <meta name="theme-color" content="#4f46e5">
-<link rel="stylesheet" href="assets/css/academicons.css"/>
+
+<link rel="stylesheet" href="/assets/css/academicons.css">
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,8 +18,9 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Abdul Rehman Naseer",
-  "url": "{{ site.url | default: site.github.url }}",
+  "url": "{{ site.url | default: site.github.url }}/",
   "image": "{{ site.url | default: site.github.url }}/{{ site.author.avatar }}",
+  "email": "mailto:{{ site.author.email }}",
   "sameAs": [
     "https://github.com/{{ site.author.github }}",
     "https://www.linkedin.com/in/{{ site.author.linkedin }}",
@@ -29,7 +28,7 @@
     "{{ site.author.orcid }}",
     "{{ site.author.researchgate }}"
   ],
-  "jobTitle": "Data Scientist & Machine Learning Researcher",
+  "jobTitle": "Data Scientist & AI Researcher",
   "worksFor": {
     "@type": "EducationalOrganization",
     "name": "GIFT University"
@@ -39,6 +38,7 @@
     "name": "GIFT University",
     "sameAs": "https://www.gift.edu.pk"
   },
+  "knowsAbout": ["Computer Vision", "Machine Learning", "Anomaly Detection", "Multimodal Learning", "Retrieval-Augmented Generation"],
   "description": "{{ site.description }}"
 }
 </script>
