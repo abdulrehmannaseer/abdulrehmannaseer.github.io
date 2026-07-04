@@ -36,7 +36,7 @@ You can find my publications on my [Google Scholar profile](https://scholar.goog
 Ali Zia, Usman Ali, **Abdul Rehman**, Umer Ramzan, Kang Han, Muhammad Faheem, Shahnawaz Qureshi, and Wei Xiang
 
 
-[**Project Page**](https://topotta,github.io)
+[**Project Page**](https://topotta.github.io)
 
 </div>
 </div>
@@ -48,7 +48,7 @@ Ali Zia, Usman Ali, **Abdul Rehman**, Umer Ramzan, Kang Han, Muhammad Faheem, Sh
 
 Ali Zia, Muhammad Umer Ramzan, Abdelwahed Khamis, Usman Ali, and **Abdul Rehman**
 
-[**Project Page**](https://hyperradar,github.io)
+[**Project Page**](https://hyperradar.github.io)
 
 </div>
 </div>
