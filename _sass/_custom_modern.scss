@@ -4,7 +4,7 @@
    ========================================================================== */
 
 /* Static tokens */
-$m-container : 1100px;
+$m-container : 1200px;
 $m-radius    : 16px;
 $m-ease      : cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -400,7 +400,7 @@ button:focus-visible {
 }
 
 /* --------------------------------------------------------------------------
-   Layout — centered grid, sidebar + content
+   Layout — centered single column (hero on top, content below)
    -------------------------------------------------------------------------- */
 
 #main {
@@ -414,27 +414,6 @@ button:focus-visible {
   clear: both !important;
   width: auto !important;
   animation: none !important; /* children animate individually instead */
-
-  @media (min-width: 925px) {
-    display: grid !important;
-    grid-template-columns: 300px minmax(0, 1fr) !important;
-    gap: 2.5rem;
-    align-items: start;
-  }
-}
-
-.sidebar {
-  width: auto !important;
-  float: none !important;
-  margin: 0 !important;
-  position: static;
-  opacity: 1 !important;
-  animation: fade-up 0.6s $m-ease both;
-
-  @media (min-width: 925px) {
-    position: sticky !important;
-    top: 5rem;
-  }
 }
 
 .page {
@@ -442,154 +421,201 @@ button:focus-visible {
   float: none !important;
   margin: 0 !important;
   padding: 0 !important;
-  animation: fade-up 0.6s $m-ease 0.12s both;
+  animation: fade-up 0.6s $m-ease 0.25s both;
 }
 
 /* --------------------------------------------------------------------------
-   Sidebar profile card
+   Profile hero — full-width intro card (photo left, identity right)
+   Legacy _sidebar.scss flips .author__* rules at $large (1200px here), so
+   every affected property is pinned with !important.
    -------------------------------------------------------------------------- */
 
-.sidebar {
+.profile-hero {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: $m-radius + 4px;
-  padding: 1.75rem !important;
+  padding: 2rem;
   box-shadow: var(--shadow);
   transition: background-color 0.3s $m-ease, border-color 0.3s $m-ease;
+  animation: fade-up 0.6s $m-ease both;
 
   .profile_box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid !important; /* legacy: flex below / table above 1200px */
+    grid-template-columns: 1fr;
+    justify-items: center;
     text-align: center;
-    width: 100%;
+    gap: 1.25rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: auto minmax(0, 1fr);
+      column-gap: 2.5rem;
+      row-gap: 0.5rem;
+      justify-items: start;
+      text-align: left;
+    }
   }
 
   .author__avatar {
-    display: inline-block;
-    width: auto;
-    margin-bottom: 1.25rem;
+    display: block !important; /* legacy: table-cell + width 75px below 1200px */
+    width: auto !important;
+    height: auto;
     padding: 4px;
     border-radius: 50%;
     background: linear-gradient(135deg, #4f46e5, #8b5cf6, #ec4899);
+    animation: fade-up 0.6s $m-ease 0.05s both;
+
+    @media (min-width: 768px) {
+      grid-row: 1 / span 2;
+      align-self: center;
+    }
 
     img {
       display: block;
-      border-radius: 50%;
-      width: 136px;
-      height: 136px;
+      width: 160px;
+      height: 160px;
       min-width: 0;
-      max-width: 136px;
-      padding: 0;
-      border: 3px solid var(--surface);
+      max-width: none;
+      padding: 0 !important; /* legacy: 5px + gray border at >=1200px */
+      border: 3px solid var(--surface) !important;
+      border-radius: 50%;
       object-fit: cover;
       box-shadow: none;
       transition: transform 0.3s $m-ease;
 
       &:hover {
-        transform: scale(1.04) rotate(2deg);
+        transform: scale(1.03) rotate(2deg);
       }
     }
   }
 
   .author__content {
-    display: block;
-    width: 100%;
-    padding: 0;
+    display: block !important; /* legacy: table-cell below 1200px */
+    width: auto !important;
+    min-width: 0;
+    padding: 0 !important;
 
     .author__name {
       font-family: 'Outfit', sans-serif;
-      font-size: 1.35rem;
+      font-size: 1.7rem;
       font-weight: 700;
       color: var(--ink);
-      margin: 0.5rem 0 0.35rem;
       letter-spacing: -0.02em;
-      line-height: 1.25;
+      line-height: 1.2;
+      margin: 0 0 0.5rem !important;
+      animation: fade-up 0.6s $m-ease 0.12s both;
+
+      @media (min-width: 768px) {
+        font-size: 2.1rem;
+      }
     }
 
     .author__bio {
-      font-size: 0.9rem;
+      font-size: 1rem;
       color: var(--muted);
-      line-height: 1.5;
-      margin: 0;
+      line-height: 1.6;
+      margin: 0 !important;
+      animation: fade-up 0.6s $m-ease 0.2s both;
     }
   }
 
   .author__urls-wrapper {
-    display: block;
+    display: block !important; /* legacy: table-cell below 1200px */
+    position: static;
     width: 100%;
-    margin-top: 1rem;
-    cursor: default;
+    margin: 0 !important;
+    cursor: default !important;
+    z-index: auto;
+    animation: fade-up 0.6s $m-ease 0.28s both;
+
+    button {
+      display: none !important; /* theme's follow-menu toggle, never wanted */
+    }
   }
 
-  /* Contact & research links — desktop */
+  /* Labeled links as pill buttons, all widths */
   .author__urls {
-    display: block !important;
-    position: static;
+    display: flex !important; /* legacy: hidden absolute dropdown below 1200px */
+    position: static !important;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 0.25rem 0 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
     list-style: none;
-    margin: 1.25rem 0 0;
-    padding: 1.25rem 0 0;
-    border: 0;
-    border-top: 1px solid var(--border-soft);
-    background: transparent;
-    box-shadow: none;
-    text-align: left;
     z-index: auto;
+
+    @media (min-width: 768px) {
+      justify-content: flex-start;
+    }
 
     &::before,
     &::after {
-      display: none;
+      display: none !important; /* legacy dropdown arrow triangles */
     }
 
+    /* Tagline: full-width lead line above the pills */
+    .author__tagline {
+      flex-basis: 100%;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+      margin: 0 0 0.35rem;
+    }
+
+    /* Non-link items (location, employer) read as quiet meta text */
     li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      margin-bottom: 0.65rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin: 0 0.35rem 0 0;
       font-size: 0.875rem;
-      color: var(--text);
+      color: var(--muted);
       white-space: normal;
-      word-break: break-word;
-      line-height: 1.45;
 
       i {
-        color: var(--faint);
-        font-size: 0.95rem;
-        width: 18px;
-        margin-top: 3px;
-        text-align: center;
-        flex-shrink: 0;
+        color: var(--faint) !important; /* pin against .social-icons brand colors */
+        font-size: 0.9rem;
       }
     }
 
-    .author__tagline {
-      display: block;
-      color: var(--muted);
-      font-size: 0.85rem;
-      line-height: 1.5;
-      margin-bottom: 1em;
-    }
-
+    /* Linked items become pills */
     a {
-      display: inline;
-      margin: 0;
-      padding: 0;
-      color: var(--text);
-      font-size: inherit;
-      font-weight: 500;
+      display: inline-flex !important;
+      align-items: center;
+      gap: 0.45rem;
+      margin: 0 !important;
+      padding: 0.4rem 0.9rem !important;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.8rem !important;
+      font-weight: 600;
+      color: var(--text) !important;
       text-decoration: none;
-      transition: color 0.2s $m-ease;
+      transition: background 0.2s $m-ease, color 0.2s $m-ease, border-color 0.2s $m-ease, transform 0.2s $m-ease, box-shadow 0.2s $m-ease;
 
       &:hover {
-        color: var(--accent);
-        text-decoration: none;
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #fff !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.25);
+        text-decoration: none !important;
+
+        i {
+          color: #fff !important;
+        }
       }
     }
   }
 
-  /* Compact icon tray — mobile only */
+  /* Icon tray is never used in the hero */
   .author__urls_sm {
-    display: none;
+    display: none !important; /* legacy: shown below 1200px */
   }
 }
 
@@ -843,11 +869,12 @@ button:focus-visible {
 
   @media (min-width: 768px) {
     flex-direction: row;
-    align-items: stretch;
+    align-items: center; /* natural-height image centers against the text */
   }
 
   .paper-box-image {
     flex: 0 0 auto;
+    align-self: center;
     width: 100%;
     position: relative;
 
@@ -858,43 +885,16 @@ button:focus-visible {
 
     > div {
       position: relative;
-      overflow: hidden;
+      overflow: hidden; /* clips the hover zoom */
       border-radius: 10px;
       border: 1px solid var(--border-soft);
-      background: var(--surface);
-
-      /* Blurred copy of the teaser fills the letterbox space behind the
-         full image; --teaser-bg is set per-card from the img src in JS */
-      &::before {
-        content: '';
-        position: absolute;
-        inset: -24px;
-        background-image: var(--teaser-bg);
-        background-size: cover;
-        background-position: center;
-        filter: blur(18px) saturate(1.05);
-        opacity: 0.55;
-      }
     }
 
     img {
-      position: relative;
       display: block;
       width: 100%;
+      height: auto; /* natural height at the column width, any aspect ratio */
       transition: transform 0.4s $m-ease;
-    }
-
-    /* Fill the card height while always showing the whole image */
-    @media (min-width: 768px) {
-      > div {
-        height: 100%;
-        min-height: 180px;
-      }
-
-      img {
-        height: 100%;
-        object-fit: contain;
-      }
     }
 
     .badge {
@@ -1034,6 +1034,10 @@ button:focus-visible {
   @media (min-width: 600px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .skills-category {
@@ -1116,78 +1120,8 @@ button:focus-visible {
     padding: 1.75rem;
   }
 
-  .sidebar {
-    padding: 1.5rem !important;
-
-    .profile_box {
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
-      text-align: left;
-      gap: 1.25rem;
-    }
-
-    .author__avatar {
-      margin-bottom: 0;
-
-      img {
-        width: 88px;
-        height: 88px;
-      }
-    }
-
-    .author__content {
-      flex: 1;
-
-      .author__name {
-        font-size: 1.2rem;
-        margin-top: 0;
-      }
-
-      .author__bio {
-        font-size: 0.85rem;
-      }
-    }
-
-    .author__urls-wrapper {
-      width: 100%;
-      margin-top: 0;
-      flex-basis: 100%;
-    }
-
-    .author__urls {
-      display: none !important;
-    }
-
-    .author__urls_sm {
-      display: flex !important;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      gap: 0.5rem;
-      margin-top: 1rem;
-      padding: 0;
-      font-size: 1rem;
-
-      a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        background: var(--border-soft);
-        color: var(--text);
-        font-size: 0.95rem;
-        text-decoration: none;
-        transition: background 0.2s $m-ease, color 0.2s $m-ease, transform 0.2s $m-ease;
-
-        &:hover {
-          background: var(--accent);
-          color: #fff;
-          transform: translateY(-2px);
-        }
-      }
-    }
+  .profile-hero {
+    padding: 1.5rem;
   }
 }
 
@@ -1204,21 +1138,12 @@ button:focus-visible {
     font-size: 1.35rem;
   }
 
-  .sidebar {
-    padding: 1.25rem !important;
-
-    .profile_box {
-      flex-direction: column;
-      text-align: center;
-    }
+  .profile-hero {
+    padding: 1.25rem;
 
     .author__avatar img {
-      width: 100px;
-      height: 100px;
-    }
-
-    .author__urls_sm {
-      justify-content: center;
+      width: 128px;
+      height: 128px;
     }
   }
 

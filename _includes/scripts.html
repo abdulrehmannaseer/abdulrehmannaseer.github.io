@@ -14,11 +14,6 @@
       }
     });
 
-    // Publication teasers: reuse each image as its own blurred letterbox backdrop
-    document.querySelectorAll('.paper-box-image img').forEach(function (img) {
-      img.parentElement.style.setProperty('--teaser-bg', "url('" + (img.currentSrc || img.src) + "')");
-    });
-
     // Light/dark theme toggle (initial theme is applied in head.html)
     var toggle = document.getElementById('theme-toggle');
     if (toggle) {
@@ -39,7 +34,7 @@
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (!reduceMotion && 'IntersectionObserver' in window) {
       var targets = document.querySelectorAll(
-        '.paper-box, .skills-category, #news + ul > li, #manuscripts + ul > li, #awards + ul > li, #education + ul > li'
+        '.paper-box, .skills-category, #news + ul > li, #manuscripts + ul > li, #experience + ul > li, #awards + ul > li, #education + ul > li'
       );
       var observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
