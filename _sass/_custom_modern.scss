@@ -244,15 +244,56 @@ button:focus-visible {
     }
 
     button {
-      background-color: var(--accent);
-      border-radius: 8px;
-      height: auto;
       top: 50%;
+      right: 0;
       transform: translateY(-50%);
-      padding: 0.5rem 0.6rem;
+      width: 38px;
+      height: 38px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: border-color 0.2s $m-ease, background-color 0.3s $m-ease;
+
+      .navicon,
+      .navicon::before,
+      .navicon::after {
+        width: 20px;
+        height: 2px;
+        border-radius: 2px;
+        background: var(--ink);
+      }
+
+      .navicon::before {
+        top: -6px;
+      }
+
+      .navicon::after {
+        bottom: -6px;
+      }
 
       &:hover {
-        background-color: var(--accent-hover);
+        background: var(--surface);
+        border-color: var(--accent);
+
+        .navicon,
+        .navicon::before,
+        .navicon::after {
+          background: var(--accent);
+        }
+      }
+
+      &.close .navicon {
+        background: transparent;
+
+        &::before,
+        &::after {
+          top: 0;
+          bottom: auto;
+        }
       }
     }
 
@@ -293,6 +334,22 @@ button:focus-visible {
     &:hover {
       color: var(--accent);
       background: transparent;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .masthead__inner-wrap {
+      padding: 0.5rem 1rem;
+    }
+
+    .masthead__menu-item--lg {
+      padding-right: 0.75em;
+    }
+
+    .masthead__menu-home-item a {
+      font-size: 1rem;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }
