@@ -20,10 +20,10 @@ You can find my publications on my [Google Scholar profile](https://scholar.goog
 
 ## 🔥 News {#news}
 
-- *2026.01*: 🎉 Co-authored paper accepted in **IEEE TPAMI** (*Learning Topology-Aware Representations via Test-Time Adaptation for Anomaly Segmentation*).
-- *2026.01*: 🎉 Co-authored paper accepted in **ECCV 2026** (*Learning Structurally Consistent Representations for Multi-View Radar Semantic Segmentation*).
-- *2026.01*: 🎉 Co-authored paper accepted in **IEEE Sensors Journal** (*Hypergraph Contrastive Sensor Fusion for Multimodal Fault Diagnosis in Induction Motors*).
-- *2025.12*: 🎉 Co-authored paper accepted in **DICTA 2025** (*2D-3D Feature Fusion via Cross-Modal Latent Synthesis and Attention-Guided Restoration for Industrial Anomaly Detection*).
+- *2026.01*: 🎉 **IEEE TPAMI** accepted, (*Learning Topology-Aware Representations via Test-Time Adaptation for Anomaly Segmentation*).
+- *2026.01*: 🎉 **ECCV 2026** accepted, (*Learning Structurally Consistent Representations for Multi-View Radar Semantic Segmentation*).
+- *2026.01*: 🎉 **IEEE Sensors Journal** accepted, (*Hypergraph Contrastive Sensor Fusion for Multimodal Fault Diagnosis in Induction Motors*).
+- *2025.12*: 🎉 **DICTA 2025** accepted, (*2D-3D Feature Fusion via Cross-Modal Latent Synthesis and Attention-Guided Restoration for Industrial Anomaly Detection*).
 - *2025.10*: 💼 Appointed as Lab Instructor at Department of Computer Science, GIFT University.
 
 ## 📝 Publications {#publications}
