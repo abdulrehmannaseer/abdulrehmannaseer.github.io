@@ -843,7 +843,7 @@ button:focus-visible {
 
   @media (min-width: 768px) {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: stretch;
   }
 
   .paper-box-image {
@@ -866,6 +866,18 @@ button:focus-visible {
       border-radius: 10px;
       border: 1px solid var(--border-soft);
       transition: transform 0.4s $m-ease;
+    }
+
+    /* Fill the card height so short/wide teasers leave no gap below */
+    @media (min-width: 768px) {
+      > div {
+        height: 100%;
+      }
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
     }
 
     .badge {
