@@ -858,25 +858,42 @@ button:focus-visible {
 
     > div {
       position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      border: 1px solid var(--border-soft);
+      background: var(--surface);
+
+      /* Blurred copy of the teaser fills the letterbox space behind the
+         full image; --teaser-bg is set per-card from the img src in JS */
+      &::before {
+        content: '';
+        position: absolute;
+        inset: -24px;
+        background-image: var(--teaser-bg);
+        background-size: cover;
+        background-position: center;
+        filter: blur(18px) saturate(1.05);
+        opacity: 0.55;
+      }
     }
 
     img {
+      position: relative;
       display: block;
       width: 100%;
-      border-radius: 10px;
-      border: 1px solid var(--border-soft);
       transition: transform 0.4s $m-ease;
     }
 
-    /* Fill the card height so short/wide teasers leave no gap below */
+    /* Fill the card height while always showing the whole image */
     @media (min-width: 768px) {
       > div {
         height: 100%;
+        min-height: 180px;
       }
 
       img {
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
       }
     }
 
