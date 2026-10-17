@@ -14,7 +14,10 @@ I am an AI and computer vision researcher working on multimodal learning, 2D–3
 
 I develop PyTorch-based research frameworks for cross-modal representation learning, topology-aware modelling, test-time adaptation, and feature alignment, with an emphasis on rigorous experimental evaluation. My goal is to build robust perception systems that adapt to changing environments. I secured 1st Position in my academic cohort during my studies.
 
-My research centres on four connected areas:
+{% assign citations = site.data.scholar %}
+<p class="scholar-line">Publications on <a href="{{ site.author.googlescholar }}" aria-label="Scholar — view publications and the live citation count">Scholar</a><span id="scholar-citations" class="scholar-citations" data-snapshot-url="{{ '/scholar.json' | relative_url }}" data-citations="{{ citations.citations }}" data-updated="{{ citations.updated }}"> · <span data-citation-count>{{ citations.citations }}</span> <span data-citation-label>citations</span></span></p>
+
+My research interests include:
 
 <div class="research-topics" role="list" aria-label="Research topics">
   <div class="research-topic" role="listitem">
@@ -35,16 +38,14 @@ My research centres on four connected areas:
   </div>
 </div>
 
-{% assign citations = site.data.scholar %}
-<p class="scholar-line">Publications on <a href="{{ site.author.googlescholar }}" aria-label="Scholar — view publications and the live citation count">Scholar</a><span id="scholar-citations" class="scholar-citations" data-snapshot-url="{{ '/scholar.json' | relative_url }}" data-citations="{{ citations.citations }}" data-updated="{{ citations.updated }}"> · <span data-citation-count>{{ citations.citations }}</span> <span data-citation-label>citations</span></span><small id="scholar-updated" class="scholar-updated">Updated {{ citations.updated | date: "%d %b %Y" }}</small></p>
-
 ## News {#news}
 
-- *2026.01*: **IEEE TPAMI** accepted, (*Learning Topology-Aware Representations via Test-Time Adaptation for Anomaly Segmentation*).
-- *2026.01*: **ECCV 2026** accepted, (*Learning Structurally Consistent Representations for Multi-View Radar Semantic Segmentation*).
-- *2026.01*: **IEEE Sensors Journal** accepted, (*Hypergraph Contrastive Sensor Fusion for Multimodal Fault Diagnosis in Induction Motors*).
-- *2025.12*: **DICTA 2025** accepted, (*2D-3D Feature Fusion via Cross-Modal Latent Synthesis and Attention-Guided Restoration for Industrial Anomaly Detection*).
-- *2025.10*: Appointed as Lab Instructor at School of Engineering & Applied Sciences, GIFT University.
+- **2026** — Our paper, “[Topology-Aware Optimal Transport for Source-Free Test-Time Adaptation in Anomaly Segmentation](https://topoot.github.io/),” has been accepted at **NeurIPS 2026**.
+- **2026** — Our paper, “[Learning Topology-Aware Representations via Test-Time Adaptation for Anomaly Segmentation](https://topotta.github.io/),” has been accepted for publication in **IEEE TPAMI**.
+- **2026** — Our paper, “[Learning Structurally Consistent Representations for Multi-View Radar Semantic Segmentation](https://hyperradar.github.io/),” has been accepted at **ECCV 2026**.
+- **Feb 2026** — Our paper, “[Hypergraph Contrastive Sensor Fusion for Multimodal Fault Diagnosis in Induction Motors](https://doi.org/10.1109/JSEN.2025.3648413),” has been published in **IEEE Sensors Journal**.
+- **Dec 2025** — Our paper, “[2D-3D Feature Fusion via Cross-Modal Latent Synthesis and Attention-Guided Restoration for Industrial Anomaly Detection](https://doi.org/10.1109/DICTA68720.2025.11302453),” has been published in the proceedings of **DICTA 2025**.
+- **Oct 2025** — Joined the School of Engineering & Applied Sciences at GIFT University as a **Lab Instructor**.
 
 ## Publications {#publications}
 
@@ -54,7 +55,6 @@ My research centres on four connected areas:
 **Learning Topology-Aware Representations via Test-Time Adaptation for Anomaly Segmentation**
 
 Ali Zia, Usman Ali, **Abdul Rehman**, Umer Ramzan, Kang Han, Muhammad Faheem, Shahnawaz Qureshi, and Wei Xiang
-
 
 [**Project Page**](https://topotta.github.io)
 

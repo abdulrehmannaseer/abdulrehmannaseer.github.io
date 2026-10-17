@@ -3,7 +3,6 @@
   'use strict';
   var container = document.getElementById('scholar-citations');
   if (!container) return;
-  var updated = document.getElementById('scholar-updated');
   var scholarId = 'ZTuS-yUAAAAJ';
   var cacheKey = 'scholar-citations-' + scholarId;
   var url = 'https://raw.githubusercontent.com/abdulrehmannaseer/abdulrehmannaseer.github.io/google-scholar-stats/gs_data.json';
@@ -21,13 +20,6 @@
     container.querySelector('[data-citation-count]').textContent = data.citations.toLocaleString('en-AU');
     container.querySelector('[data-citation-label]').textContent = data.citations === 1 ? 'citation' : 'citations';
     container.hidden = false;
-    if (updated) {
-      var date = new Date(data.updated + 'T00:00:00Z');
-      updated.textContent = 'Updated ' + date.toLocaleDateString('en-AU', {
-        day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC'
-      });
-      updated.hidden = false;
-    }
     return true;
   }
   try { display(JSON.parse(localStorage.getItem(cacheKey))); } catch (error) { /* Cache is optional. */ }

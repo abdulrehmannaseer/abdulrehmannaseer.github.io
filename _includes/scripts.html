@@ -14,6 +14,32 @@
       }
     });
 
+    var menuButton = document.querySelector('.nav-toggle');
+    var navigation = document.getElementById('primary-nav');
+    if (menuButton && navigation) {
+      var closeMenu = function () {
+        navigation.classList.remove('is-open');
+        menuButton.setAttribute('aria-expanded', 'false');
+      };
+      menuButton.addEventListener('click', function () {
+        var open = menuButton.getAttribute('aria-expanded') !== 'true';
+        menuButton.setAttribute('aria-expanded', String(open));
+        navigation.classList.toggle('is-open', open);
+      });
+      navigation.addEventListener('click', function (event) {
+        if (event.target.closest('a')) closeMenu();
+      });
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+          closeMenu();
+          menuButton.focus();
+        }
+      });
+      document.addEventListener('click', function (event) {
+        if (!navigation.contains(event.target) && !menuButton.contains(event.target)) closeMenu();
+      });
+    }
+
     // Light/dark theme toggle (initial theme is applied in head.html)
     var toggle = document.getElementById('theme-toggle');
     if (toggle) {
