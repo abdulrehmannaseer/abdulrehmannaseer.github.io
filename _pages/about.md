@@ -42,7 +42,7 @@ My research interests include:
 
 - **24 Sep 2026** — Our paper, “[Topology-Aware Optimal Transport for Source-Free Test-Time Adaptation in Anomaly Segmentation](https://topoot.github.io/),” has been accepted at **NeurIPS 2026**.
 - **25 Jun 2026** — Our paper, “[Learning Topology-Aware Representations via Test-Time Adaptation for Anomaly Segmentation](https://ieeexplore.ieee.org/abstract/document/11595233),” has been accepted for publication in **IEEE TPAMI**.
-- **17 Jun 2026** — Our paper, “[Learning Structurally Consistent Representations for Multi-View Radar Semantic Segmentation](https://hyperradar.github.io/),” has been accepted at **ECCV 2026**.
+- **17 Jun 2026** — Our paper, “[Learning Structurally Consistent Representations for Multi-View Radar Semantic Segmentation](https://arxiv.org/pdf/2606.31609),” has been accepted at **ECCV 2026**.
 - **Feb 2026** — Our paper, “[Hypergraph Contrastive Sensor Fusion for Multimodal Fault Diagnosis in Induction Motors](https://doi.org/10.1109/JSEN.2025.3648413),” has been published in **IEEE Sensors Journal**.
 - **Dec 2025** — Our paper, “[2D-3D Feature Fusion via Cross-Modal Latent Synthesis and Attention-Guided Restoration for Industrial Anomaly Detection](https://doi.org/10.1109/DICTA68720.2025.11302453),” has been published in the proceedings of **DICTA 2025**.
 - **Oct 2025** — Joined the School of Engineering & Applied Sciences at GIFT University as a **Lab Instructor**.
@@ -80,7 +80,7 @@ Ali Zia, Usman Ali, **Abdul Rehman**, Umer Ramzan, Kang Han, Muhammad Faheem, Sh
 
 Ali Zia, Muhammad Umer Ramzan, Abdelwahed Khamis, Usman Ali, and **Abdul Rehman**
 
-[**Project Page**](https://hyperradar.github.io)
+[**Paper**](https://arxiv.org/pdf/2606.31609) [**Project Page**](https://hyperradar.github.io)
 
 </div>
 </div>
