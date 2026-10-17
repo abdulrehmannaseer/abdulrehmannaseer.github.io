@@ -14,19 +14,40 @@ redirect_from:
 
 Motivated Data Scientist, AI researcher, and Lab Instructor at GIFT University specializing in computer vision, multimodal learning, anomaly detection, and retrieval-augmented generation (RAG). Co-author of research accepted in leading venues including IEEE TPAMI, ECCV, IEEE Sensors Journal, and DICTA. Experienced in developing PyTorch-based research systems and end-to-end AI applications involving website crawling, hybrid information retrieval, grounded question answering, and interactive user interfaces.
 
-My research interests focus on Machine Learning and Computer Vision, specifically Industrial Anomaly Detection, Multimodal Sensor Fusion, Topological Deep Learning, and Predictive Fault Diagnosis. I secured 1st Position in my academic cohort during my studies.
+My research interests focus on Machine Learning and Computer Vision. My main research topics include:
 
-You can find my publications on my [Google Scholar profile](https://scholar.google.com/citations?user=ZTuS-yUAAAAJ).
+<div class="research-topics" role="list" aria-label="Research topics">
+  <div class="research-topic" role="listitem">
+    <i class="fas fa-search" aria-hidden="true"></i>
+    <div><h3>Industrial Anomaly Detection</h3><ul><li>Unsupervised anomaly segmentation</li><li>Test-time adaptation</li></ul></div>
+  </div>
+  <div class="research-topic" role="listitem">
+    <i class="fas fa-layer-group" aria-hidden="true"></i>
+    <div><h3>Multimodal Sensor Fusion</h3><ul><li>2D–3D feature alignment</li><li>Multi-view radar segmentation</li></ul></div>
+  </div>
+  <div class="research-topic" role="listitem">
+    <i class="fas fa-project-diagram" aria-hidden="true"></i>
+    <div><h3>Topological Deep Learning</h3><ul><li>Topology-aware representations</li><li>Structural consistency</li></ul></div>
+  </div>
+  <div class="research-topic" role="listitem">
+    <i class="fas fa-heartbeat" aria-hidden="true"></i>
+    <div><h3>Predictive Fault Diagnosis</h3><ul><li>Multimodal condition monitoring</li><li>Sensor representation learning</li></ul></div>
+  </div>
+</div>
 
-## 🔥 News {#news}
+I secured 1st Position in my academic cohort during my studies.
 
-- *2026.01*: 🎉 **IEEE TPAMI** accepted, (*Learning Topology-Aware Representations via Test-Time Adaptation for Anomaly Segmentation*).
-- *2026.01*: 🎉 **ECCV 2026** accepted, (*Learning Structurally Consistent Representations for Multi-View Radar Semantic Segmentation*).
-- *2026.01*: 🎉 **IEEE Sensors Journal** accepted, (*Hypergraph Contrastive Sensor Fusion for Multimodal Fault Diagnosis in Induction Motors*).
-- *2025.12*: 🎉 **DICTA 2025** accepted, (*2D-3D Feature Fusion via Cross-Modal Latent Synthesis and Attention-Guided Restoration for Industrial Anomaly Detection*).
-- *2025.10*: 💼 Appointed as Lab Instructor at Department of Computer Science, GIFT University.
+<p class="scholar-line">You can find my publications on my <a href="https://scholar.google.com/citations?user=ZTuS-yUAAAAJ">Google Scholar profile</a><span id="scholar-citations" class="scholar-citations" hidden> · <span data-citation-count></span> <span data-citation-label>citations</span></span>.<small id="scholar-updated" class="scholar-updated" hidden></small></p>
 
-## 📝 Publications {#publications}
+## News {#news}
+
+- *2026.01*: **IEEE TPAMI** accepted, (*Learning Topology-Aware Representations via Test-Time Adaptation for Anomaly Segmentation*).
+- *2026.01*: **ECCV 2026** accepted, (*Learning Structurally Consistent Representations for Multi-View Radar Semantic Segmentation*).
+- *2026.01*: **IEEE Sensors Journal** accepted, (*Hypergraph Contrastive Sensor Fusion for Multimodal Fault Diagnosis in Induction Motors*).
+- *2025.12*: **DICTA 2025** accepted, (*2D-3D Feature Fusion via Cross-Modal Latent Synthesis and Attention-Guided Restoration for Industrial Anomaly Detection*).
+- *2025.10*: Appointed as Lab Instructor at Department of Computer Science, GIFT University.
+
+## Publications {#publications}
 
 <div class="paper-box"><div class="paper-box-image"><div><div class="badge">IEEE TPAMI</div><img src="images/tpami.png" alt="Overview diagram of topology-aware test-time adaptation for anomaly segmentation"></div></div>
 <div class="paper-box-text" markdown="1">
@@ -77,7 +98,7 @@ Usman Ali, Ali Zia, **Abdul Rehman**, Umer Ramzan, Zohaib Hassan, Talha Sattar, 
 </div>
 </div>
 
-## 📬 Manuscripts Under Review {#manuscripts}
+## Manuscripts Under Review {#manuscripts}
 
 - *Anomaly Segmentation*: **Topology-Aware Optimal Transport for Source-Free Test-Time Adaptation in Anomaly Segmentation**  
   Ali Zia, Usman Ali, Abdelwahed Khamis, Muhammad Umer Ramzan, **Abdul Rehman**, and Wei Xiang.
@@ -86,7 +107,7 @@ Usman Ali, Ali Zia, **Abdul Rehman**, Umer Ramzan, Zohaib Hassan, Talha Sattar, 
 - *Object Detection*: **Residual Object Recovery via Topology-Guided Multimodal Transport for Training-Free Open-Vocabulary Detection**  
   Ali Zia, Usman Ali, Muhammad Umer Ramzan, **Abdul Rehman**, Shahnawaz Qureshi, and Wei Xiang.
 
-## 🏫 Experience {#experience}
+## Experience {#experience}
 
 - **Lab Instructor** (2025 – Present)  
   *Department of Computer Science, GIFT University, Gujranwala, Pakistan*
@@ -96,7 +117,7 @@ Usman Ali, Ali Zia, **Abdul Rehman**, Umer Ramzan, Zohaib Hassan, Talha Sattar, 
   - Conduct collaborative research in computer vision, multimodal learning, anomaly detection, and semantic segmentation.
   - Contribute to literature reviews, dataset preparation, ablation studies, result analysis, and the preparation of manuscripts.
 
-## 🛠️ Technical Skills {#skills}
+## Technical Skills {#skills}
 
 <div class="skills-container">
   <div class="skills-category">
@@ -125,14 +146,14 @@ Usman Ali, Ali Zia, **Abdul Rehman**, Umer Ramzan, Zohaib Hassan, Talha Sattar, 
   </div>
 </div>
 
-## 🎖️ Honors and Awards {#awards}
+## Honors and Awards {#awards}
 
 - *2022*: Secured **1st Position** in the BS Data Science program academic cohort during the Spring 2022 semester at GIFT University.
 - *Oct 2023*: **Introduction to Data Science in Python**, University of Michigan (via Coursera).
 - *Sept 2023*: **What Is Data Science?**, IBM (via Coursera).
 - *Aug 2023*: **Python for Data Science, AI & Development**, IBM (via Coursera).
 
-## 📖 Education {#education}
+## Education {#education}
 
 - *2021.12 – 2025.10*: **Bachelor of Science in Data Science**, GIFT University, Gujranwala, Pakistan.  
   **CGPA**: 3.53/4.00  
