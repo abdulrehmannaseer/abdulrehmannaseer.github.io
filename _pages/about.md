@@ -109,13 +109,6 @@ Usman Ali, Ali Zia, **Abdul Rehman**, Umer Ramzan, Zohaib Hassan, Talha Sattar, 
 </div>
 </div>
 
-## Manuscripts Under Review {#manuscripts}
-
-- *Radar Segmentation*: **TopoRadar: Topology-Aware Multi-View Radar Semantic Segmentation**  
-  Ali Zia, Muhammad Umer Ramzan, Usman Ali, **Abdul Rehman**, and Abdelwahed Khamis.
-- *Object Detection*: **Residual Object Recovery via Topology-Guided Multimodal Transport for Training-Free Open-Vocabulary Detection**  
-  Ali Zia, Usman Ali, Muhammad Umer Ramzan, **Abdul Rehman**, Shahnawaz Qureshi, and Wei Xiang.
-
 ## Experience {#experience}
 
 - **Lab Instructor & Researcher** (2025 – Present)<br>
