@@ -18,7 +18,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Abdul Rehman Naseer",
+  "name": {{ site.author.name | jsonify }},
   "url": "{{ site.url | default: site.github.url }}/",
   "image": "{{ site.url | default: site.github.url }}/{{ site.author.avatar }}",
   "email": "mailto:{{ site.author.email }}",
@@ -29,7 +29,7 @@
     "{{ site.author.orcid }}",
     "{{ site.author.researchgate }}"
   ],
-  "jobTitle": "Data Scientist & AI Researcher",
+  "jobTitle": {{ site.author.bio | jsonify }},
   "worksFor": {
     "@type": "EducationalOrganization",
     "name": "GIFT University"

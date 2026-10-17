@@ -51,4 +51,4 @@ def fetch_author():
 
 
 if __name__ == "__main__":
-    refresh(fetch_author)
+    raise SystemExit(0 if refresh(fetch_author) else 1)

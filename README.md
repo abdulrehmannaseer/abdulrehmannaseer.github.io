@@ -1,4 +1,4 @@
-# 🎓 Abdul Rehman Naseer — Personal Portfolio & Research Site
+# 🎓 Abdul Rehman — Personal Portfolio & Research Site
 
 <p align="center">
   <a href="https://abdulrehmannaseer.github.io/"><img src="https://img.shields.io/badge/Live%20Website-abdulrehmannaseer.github.io-4f46e5?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Live Portfolio"></a>

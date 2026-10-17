@@ -1,0 +1,25 @@
+- label: Email
+  field: email
+  prefix: "mailto:"
+  icon: "fas fa-envelope"
+- label: Scholar
+  field: googlescholar
+  icon: "fas fa-graduation-cap"
+- label: GitHub
+  field: github
+  prefix: "https://github.com/"
+  icon: "fab fa-github"
+- label: LinkedIn
+  field: linkedin
+  prefix: "https://www.linkedin.com/in/"
+  icon: "fab fa-linkedin"
+- label: ResearchGate
+  field: researchgate
+  icon: "fab fa-researchgate"
+- label: ORCID
+  field: orcid
+  icon: "ai ai-orcid"
+- label: Instagram
+  field: instagram
+  prefix: "https://instagram.com/"
+  icon: "fab fa-instagram"

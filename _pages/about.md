@@ -8,13 +8,13 @@ redirect_from:
   - /about.html
 ---
 
-<h1 class="sr-only">Abdul Rehman Naseer — Data Scientist &amp; AI Researcher</h1>
-
 <span class="anchor" id="about-me"></span>
 
-Motivated Data Scientist, AI researcher, and Lab Instructor at GIFT University specializing in computer vision, multimodal learning, anomaly detection, and retrieval-augmented generation (RAG). Co-author of research accepted in leading venues including IEEE TPAMI, ECCV, IEEE Sensors Journal, and DICTA. Experienced in developing PyTorch-based research systems and end-to-end AI applications involving website crawling, hybrid information retrieval, grounded question answering, and interactive user interfaces.
+I am an AI and computer vision researcher working on multimodal learning, 2D–3D representation learning, point-cloud analysis, anomaly detection, semantic segmentation, radar perception, and sensor fusion. My research contributions have been accepted at NeurIPS, IEEE TPAMI, ECCV, IEEE Sensors Journal, and DICTA.
 
-My research interests focus on Machine Learning and Computer Vision. My main research topics include:
+I develop PyTorch-based research frameworks for cross-modal representation learning, topology-aware modelling, test-time adaptation, and feature alignment, with an emphasis on rigorous experimental evaluation. My goal is to build robust perception systems that adapt to changing environments. I secured 1st Position in my academic cohort during my studies.
+
+My research centres on four connected areas:
 
 <div class="research-topics" role="list" aria-label="Research topics">
   <div class="research-topic" role="listitem">
@@ -35,9 +35,8 @@ My research interests focus on Machine Learning and Computer Vision. My main res
   </div>
 </div>
 
-I secured 1st Position in my academic cohort during my studies.
-
-<p class="scholar-line">You can find my publications on my <a href="https://scholar.google.com/citations?user=ZTuS-yUAAAAJ">Google Scholar profile</a><span id="scholar-citations" class="scholar-citations" hidden> · <span data-citation-count></span> <span data-citation-label>citations</span></span>.<small id="scholar-updated" class="scholar-updated" hidden></small></p>
+{% assign citations = site.data.scholar %}
+<p class="scholar-line">Publications on <a href="{{ site.author.googlescholar }}" aria-label="Scholar — view publications and the live citation count">Scholar</a><span id="scholar-citations" class="scholar-citations" data-snapshot-url="{{ '/scholar.json' | relative_url }}" data-citations="{{ citations.citations }}" data-updated="{{ citations.updated }}"> · <span data-citation-count>{{ citations.citations }}</span> <span data-citation-label>citations</span></span><small id="scholar-updated" class="scholar-updated">Updated {{ citations.updated | date: "%d %b %Y" }}</small></p>
 
 ## News {#news}
 
@@ -45,7 +44,7 @@ I secured 1st Position in my academic cohort during my studies.
 - *2026.01*: **ECCV 2026** accepted, (*Learning Structurally Consistent Representations for Multi-View Radar Semantic Segmentation*).
 - *2026.01*: **IEEE Sensors Journal** accepted, (*Hypergraph Contrastive Sensor Fusion for Multimodal Fault Diagnosis in Induction Motors*).
 - *2025.12*: **DICTA 2025** accepted, (*2D-3D Feature Fusion via Cross-Modal Latent Synthesis and Attention-Guided Restoration for Industrial Anomaly Detection*).
-- *2025.10*: Appointed as Lab Instructor at Department of Computer Science, GIFT University.
+- *2025.10*: Appointed as Lab Instructor at School of Engineering & Applied Sciences, GIFT University.
 
 ## Publications {#publications}
 
@@ -74,6 +73,18 @@ Ali Zia, Muhammad Umer Ramzan, Abdelwahed Khamis, Usman Ali, and **Abdul Rehman*
 </div>
 </div>
 
+<div class="paper-box"><div class="paper-box-image"><div><div class="badge">NeurIPS 2026</div><img src="images/TopoOT.png" alt="TopoOT framework for topology-aware optimal transport and source-free test-time adaptation" loading="lazy"></div></div>
+<div class="paper-box-text" markdown="1">
+
+**Topology-Aware Optimal Transport for Source-Free Test-Time Adaptation in Anomaly Segmentation**
+
+Ali Zia, Usman Ali, Abdelwahed Khamis, Muhammad Umer Ramzan, **Abdul Rehman**, and Wei Xiang
+
+[**Project Page**](https://topoot.github.io/) [**GitHub**](https://github.com/adabrh/TopoOT)
+
+</div>
+</div>
+
 <div class="paper-box"><div class="paper-box-image"><div><div class="badge">IEEE Sensors Journal</div><img src="images/Hypergraph.png" alt="Architecture diagram of hypergraph contrastive sensor fusion for multimodal fault diagnosis"></div></div>
 <div class="paper-box-text" markdown="1">
 
@@ -81,7 +92,7 @@ Ali Zia, Muhammad Umer Ramzan, Abdelwahed Khamis, Usman Ali, and **Abdul Rehman*
 
 Usman Ali, Ali Zia, Waqas Ali, Umer Ramzan, **Abdul Rehman**, Muhammad Tayyab Chaudhry, Wei Xiang
 
-[**PAPER**](https://doi.org/10.1109/JSEN.2025.3648413) [**GITHUB**](https://github.com/EngrUsmaanAli/MM-HCAN)
+[**Paper**](https://doi.org/10.1109/JSEN.2025.3648413) [**GitHub**](https://github.com/EngrUsmaanAli/MM-HCAN)
 
 </div>
 </div>
@@ -93,15 +104,13 @@ Usman Ali, Ali Zia, Waqas Ali, Umer Ramzan, **Abdul Rehman**, Muhammad Tayyab Ch
 
 Usman Ali, Ali Zia, **Abdul Rehman**, Umer Ramzan, Zohaib Hassan, Talha Sattar, Jing Wang, Wei Xiang
 
-[**PAPER**](https://doi.org/10.1109/DICTA68720.2025.11302453) [**GITHUB**](https://github.com/adabrh/MAFR)
+[**Paper**](https://doi.org/10.1109/DICTA68720.2025.11302453) [**GitHub**](https://github.com/adabrh/MAFR)
 
 </div>
 </div>
 
 ## Manuscripts Under Review {#manuscripts}
 
-- *Anomaly Segmentation*: **Topology-Aware Optimal Transport for Source-Free Test-Time Adaptation in Anomaly Segmentation**  
-  Ali Zia, Usman Ali, Abdelwahed Khamis, Muhammad Umer Ramzan, **Abdul Rehman**, and Wei Xiang.
 - *Radar Segmentation*: **TopoRadar: Topology-Aware Multi-View Radar Semantic Segmentation**  
   Ali Zia, Muhammad Umer Ramzan, Usman Ali, **Abdul Rehman**, and Abdelwahed Khamis.
 - *Object Detection*: **Residual Object Recovery via Topology-Guided Multimodal Transport for Training-Free Open-Vocabulary Detection**  
@@ -109,8 +118,8 @@ Usman Ali, Ali Zia, **Abdul Rehman**, Umer Ramzan, Zohaib Hassan, Talha Sattar, 
 
 ## Experience {#experience}
 
-- **Lab Instructor** (2025 – Present)  
-  *Department of Computer Science, GIFT University, Gujranwala, Pakistan*
+- **Lab Instructor & Researcher** (2025 – Present)<br>
+  *School of Engineering & Applied Sciences, GIFT University, Gujranwala, Pakistan*
   - Deliver laboratory instruction for Artificial Intelligence, Data Mining, Data Visualization, and Introduction to Data Science.
   - Guide students in implementing machine-learning workflows, data-analysis techniques, visualization methods, and programming assignments.
   - Support laboratory assessments, debugging activities, and the evaluation of student projects.

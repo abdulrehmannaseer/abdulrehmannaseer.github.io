@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - 'google_scholar_crawler/**'
+      - '_data/scholar.json'
       - '.github/workflows/google_scholar_crawler.yaml'
 
 permissions:
@@ -37,16 +38,26 @@ jobs:
           status=0
           git ls-remote --exit-code --heads origin google-scholar-stats > /dev/null || status=$?
           if [ "$status" -eq 0 ]; then
-            git fetch origin google-scholar-stats
+            git fetch origin google-scholar-stats:refs/remotes/origin/google-scholar-stats
             git show FETCH_HEAD:gs_data.json > google_scholar_crawler/results/gs_data.json
           elif [ "$status" -ne 2 ]; then
             exit "$status"
+          else
+            cp _data/scholar.json google_scholar_crawler/results/gs_data.json
           fi
+      - name: Test citation safeguards
+        run: python -m unittest discover -s tests -v
       - name: Fetch current citations
+        id: fetch
         run: timeout 240 python google_scholar_crawler/main.py
         continue-on-error: true
         env:
           GOOGLE_SCHOLAR_ID: ZTuS-yUAAAAJ
+      - name: Report blocked refresh
+        if: steps.fetch.outcome == 'failure'
+        run: |
+          echo '::warning::Scholar refresh was blocked. The website retains its last verified count.'
+          echo 'Scholar could not be refreshed. The last verified count was preserved.' >> "$GITHUB_STEP_SUMMARY"
       - name: Publish saved citation data
         shell: bash
         run: |
