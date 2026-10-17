@@ -49,6 +49,18 @@ My research interests include:
 
 ## Publications {#publications}
 
+<div class="paper-box"><div class="paper-box-image"><div><div class="badge">NeurIPS 2026</div><img src="images/TopoOT.png" alt="TopoOT framework for topology-aware optimal transport and source-free test-time adaptation" loading="lazy"></div></div>
+<div class="paper-box-text" markdown="1">
+
+**Topology-Aware Optimal Transport for Source-Free Test-Time Adaptation in Anomaly Segmentation**
+
+Ali Zia, Usman Ali, Abdelwahed Khamis, Muhammad Umer Ramzan, **Abdul Rehman**, and Wei Xiang
+
+[**Project Page**](https://topoot.github.io/) [**GitHub**](https://github.com/adabrh/TopoOT)
+
+</div>
+</div>
+
 <div class="paper-box"><div class="paper-box-image"><div><div class="badge">IEEE TPAMI</div><img src="images/tpami.png" alt="Overview diagram of topology-aware test-time adaptation for anomaly segmentation"></div></div>
 <div class="paper-box-text" markdown="1">
 
@@ -69,18 +81,6 @@ Ali Zia, Usman Ali, **Abdul Rehman**, Umer Ramzan, Kang Han, Muhammad Faheem, Sh
 Ali Zia, Muhammad Umer Ramzan, Abdelwahed Khamis, Usman Ali, and **Abdul Rehman**
 
 [**Project Page**](https://hyperradar.github.io)
-
-</div>
-</div>
-
-<div class="paper-box"><div class="paper-box-image"><div><div class="badge">NeurIPS 2026</div><img src="images/TopoOT.png" alt="TopoOT framework for topology-aware optimal transport and source-free test-time adaptation" loading="lazy"></div></div>
-<div class="paper-box-text" markdown="1">
-
-**Topology-Aware Optimal Transport for Source-Free Test-Time Adaptation in Anomaly Segmentation**
-
-Ali Zia, Usman Ali, Abdelwahed Khamis, Muhammad Umer Ramzan, **Abdul Rehman**, and Wei Xiang
-
-[**Project Page**](https://topoot.github.io/) [**GitHub**](https://github.com/adabrh/TopoOT)
 
 </div>
 </div>
